@@ -1,0 +1,42 @@
+.logo {
+  max-width: 200px;
+  aspect-ratio: 16/4;
+}
+
+.primary {
+  color: #245b5a !important;
+}
+
+.secondary {
+  color: #b28721 !important;
+}
+
+.btn-bg-primary {
+  background: #b28721 !important;
+  border-color: transparent !important;
+}
+
+.btn-bg-primary:hover {
+  background: #245b5a !important;
+}
+
+.background-secondary {
+  background: #b28721 !important;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    top: 100%;
+    left: 0;
+    opacity: 60%;
+    transition: 0.5s ease;
+}
+
+.card:hover .overlay {
+    top: 0;
+    opacity: 1 !important;
+}
