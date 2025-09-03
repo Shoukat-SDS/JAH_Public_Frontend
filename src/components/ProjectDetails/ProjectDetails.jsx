@@ -33,15 +33,15 @@ const ProjectDetails = () => {
                         key={index}
                         id={`project-${index}`} 
                         className="row align-items-center mb-5"
-                        data-aos="fade-up"
-                        data-aos-delay={`${index * 200}`}
+                        // data-aos="fade-up"
+                        // data-aos-delay={`${index * 200}`}
                     >
                         {/* Odd index → Image Left, Details Right */}
                         {index % 2 === 0 ? (
                             <>
                                 <div className="col-lg-6 mb-4 mb-lg-0">
                                     <img
-                                        src={item.img || "/placeholder.jpg"}
+                                        src={item.image}
                                         alt={item.title}
                                         className="img-fluid rounded-3 shadow"
                                     />
@@ -49,9 +49,6 @@ const ProjectDetails = () => {
                                 <div className="col-lg-6">
                                     <h2 className="primary mb-3">{item.title}</h2>
                                     <p className="mb-4">{item.desc}</p>
-                                    <button className="btn btn-bg-primary text-white px-4">
-                                        Read More
-                                    </button>
                                 </div>
                             </>
                         ) : (
@@ -59,7 +56,7 @@ const ProjectDetails = () => {
                             <>
                                 <div className="col-lg-6 order-lg-2 mb-4 mb-lg-0">
                                     <img
-                                        src={item.img || "/placeholder.jpg"}
+                                        src={item.image || "/placeholder.jpg"}
                                         alt={item.title}
                                         className="img-fluid rounded-3 shadow"
                                     />
@@ -67,9 +64,6 @@ const ProjectDetails = () => {
                                 <div className="col-lg-6 order-lg-1">
                                     <h2 className="primary mb-3">{item.title}</h2>
                                     <p className="mb-4">{item.desc}</p>
-                                    <button className="btn btn-bg-primary text-white px-4">
-                                        Read More
-                                    </button>
                                 </div>
                             </>
                         )}

@@ -11,7 +11,7 @@ import Contact from "./pages/Contact/Contact"
 import Error from "./pages/Error/Error"
 import Donate from "./pages/Donate/Donate"
 import DonateDetail from "./components/DonateDetail/DonateDetail"
-import ProjectDetails from "./components/ProjectDetails/ProjectDetails"
+import ProjectDetails from "./pages/ProjectDetails/PorjectDetails"
 import Projects from "./pages/Projects/Projects"
 
 function App() {
@@ -29,8 +29,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/donate/:id" element={<DonateDetail />} />
-            <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
