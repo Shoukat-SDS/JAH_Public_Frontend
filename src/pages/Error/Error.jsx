@@ -1,3 +1,4 @@
+// pages/Error/Error.jsx
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import { Link } from 'react-router-dom'

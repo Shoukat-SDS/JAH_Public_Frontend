@@ -4,15 +4,17 @@ import Spinner from './components/Spinner/Spinner'
 import Home from "./pages/Home/Home"
 import Layout from "./components/Layout/Layout"
 import About from "./pages/About/About"
-import Activities from "./pages/Activites/Activities"
-import Blog from "./pages/Blog/Blog"
-import Team from "./pages/Team/Team"
 import Contact from "./pages/Contact/Contact"
 import Error from "./pages/Error/Error"
 import Donate from "./pages/Donate/Donate"
 import DonateDetail from "./components/DonateDetail/DonateDetail"
 import ProjectDetails from "./pages/ProjectDetails/PorjectDetails"
 import Projects from "./pages/Projects/Projects"
+import Department from "./pages/Department/Department"
+import DepartmentDetail from "./pages/Department/DepartmentDetails"
+import BlogDetail from "./pages/Blog/BlogDetail"
+import Blog from "./pages/Blog/Blog"
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
     <>
       <Spinner />
       <Router>
+        <ScrollToTop />
         <Routes>
           {/* Layout ke andar pages */}
           <Route element={<Layout />}>
@@ -31,6 +34,10 @@ function App() {
             <Route path="/donate/:id" element={<DonateDetail />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/project-details" element={<ProjectDetails />} />
+            <Route path="/departments" element={<Department />} />
+            <Route path="/departments/:id" element={<DepartmentDetail />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>

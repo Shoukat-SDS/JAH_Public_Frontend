@@ -1,3 +1,4 @@
+// pages/Contact/Contact.jsx
 import React, { useState } from 'react'
 import Swal from "sweetalert2"
 import HeroSection from '../../components/HeroSection/HeroSection'

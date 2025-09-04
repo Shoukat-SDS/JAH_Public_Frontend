@@ -4,29 +4,26 @@
         {
             id: 1,
             title: "Baitusslam School",
-            // price: "Rs 10,000",
             category: "Education",
             img: causeImage,
         },
         {
             id: 2,
             title: "Baitusslam Madrassa",
-            // price: "Rs 140,000",
             category: "Education",
             img: causeImage,
         },
         {
             id: 3,
             title: "Masjid Baitussalam",
-            // price: "Rs 42,000",
-            category: "Education",
+            category: "Masajid",
             img: causeImage,
         },
         {
             id: 4,
             title: "Solar System",
             // price: "Rs 10,000",
-            category: "Development",
+            category: "Masajid",
             img: causeImage,
         },
         {
@@ -53,7 +50,7 @@
         {
             id: 8,
             title: "R.O Plant",
-            category: ["Welfare", "Development"],
+            category: ["Welfare", "Masajid"],
             img: causeImage,
           },
     ]

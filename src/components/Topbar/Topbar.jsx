@@ -22,13 +22,13 @@ export default function Topbar() {
                 About
               </Nav.Link>
               <NavDropdown title="Departments" id="pages-dropdown">
-                <NavDropdown.Item as={NavLink} to="/education">
+                <NavDropdown.Item as={NavLink} to="/departments/education">
                   Education
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/masajid">
+                <NavDropdown.Item as={NavLink} to="/departments/masajid">
                   Masajid
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/welfare">
+                <NavDropdown.Item as={NavLink} to="/departments/welfare">
                   Welfare
                 </NavDropdown.Item>
               </NavDropdown>

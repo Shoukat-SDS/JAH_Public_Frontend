@@ -1,3 +1,4 @@
+// pages/Project/Project.jsx
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import ProjectsSection from "../../components/Projects/Projects"

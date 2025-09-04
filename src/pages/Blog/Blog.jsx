@@ -1,5 +1,7 @@
+// pages/Blog/Blog.jsx
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
+import BlogSection from '../../components/BlogSection/BlogSection'
 
 const Blog = () => {
   return (
@@ -11,7 +13,9 @@ const Blog = () => {
           { label: "Blog" }
         ]}
       />
+      <BlogSection />
     </div>
+
   )
 }
 

@@ -1,3 +1,4 @@
+// pages/Donate/Donate.jsx
 import React from 'react'
 import DonateItems from '../../components/DonateItems/DonateItems'
 import HeroSection from '../../components/HeroSection/HeroSection'
