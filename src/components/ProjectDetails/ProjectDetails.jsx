@@ -1,4 +1,4 @@
-// src/components/ProjectDetails.jsx
+// components/ProjectDetails/ProjectDetails.jsx
 import React, { useEffect } from "react"
 import projectsData from "../../data/projectsData"
 import AOS from "aos"

@@ -1,7 +1,5 @@
-// Footer.jsx
+// components/Footer/Footer.jsx
 import React from "react";
-import blogImage from "../../assets/blog-mini-1.jpg"
-import blogImage1 from "../../assets/blog-mini-2.jpg"
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -73,15 +71,6 @@ const Footer = () => {
                     </a>
                   </small>
                 </div>
-                {/* <h6 className="secondary mt-4 mb-0">Our Mobile</h6>
-                <div className="d-flex align-items-center py-4">
-                  <span className="flex-shrink-0 btn-square btn-bg-primary me-3 p-4">
-                    <i className="fa fa-phone-alt text-dark-50"></i>
-                  </span>
-                  <a href="#" className="text-body text-white-50">
-                    +92-321-2550100
-                  </a>
-                </div> */}
                 <h6 className="secondary mt-4 mb-0">Call & WhatsApp Numbers:</h6>
                 <div className="d-flex flex-column py-4">
                   <div className="d-flex align-items-center mb-3">
@@ -177,31 +166,6 @@ const Footer = () => {
           </div>
 
           {/* Footer Item 4 */}
-          {/* <div className="col-md-6 col-lg-6 col-xl-3">
-            <div className="footer-item mt-5">
-              <h4 className="text-light mb-4">Latest Post</h4>
-
-              <div className="d-flex border-bottom border-secondary py-4">
-                <img src={blogImage} className="img-fluid flex-shrink-0" alt="" />
-                <div className="ps-3">
-                  <p className="mb-0 text-white-50">01 Jan 2045</p>
-                  <a href="#" className="text-body text-white-50 text-decoration-none">
-                    Lorem ipsum dolor sit amet elit eros vel
-                  </a>
-                </div>
-              </div>
-
-              <div className="d-flex py-4">
-                <img src={blogImage1} className="img-fluid flex-shrink-0" alt="" />
-                <div className="ps-3">
-                  <p className="mb-0 text-muted text-white-50">01 Jan 2045</p>
-                  <a href="#" className="text-body text-white-50 text-decoration-none">
-                    Lorem ipsum dolor sit amet elit eros vel
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="col-md-6 col-lg-6 col-xl-3">
             <div className="footer-item mt-5">
               <h4 className="text-light mb-4">Our Campuses</h4>

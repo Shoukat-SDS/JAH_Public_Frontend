@@ -1,4 +1,4 @@
-// src/components/Activities.jsx
+// components/Projects/Projects.jsx
 import React, { useEffect } from "react";
 import projectsData from "../../data/projectsData";
 import AOS from "aos";

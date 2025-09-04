@@ -1,3 +1,4 @@
+// components/DonateDetail/DonateDetail.jsx
 import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import HeroSection from "../../components/HeroSection/HeroSection"

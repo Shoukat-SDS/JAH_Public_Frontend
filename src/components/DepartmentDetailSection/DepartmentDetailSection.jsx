@@ -1,4 +1,4 @@
-// src/components/DepartmentDetailSection.jsx
+// components/DepartmentDetailSection.jsx
 import React from "react"
 import { useParams, Link } from "react-router-dom"
 import departmentsData from "../../data/departmentsData"

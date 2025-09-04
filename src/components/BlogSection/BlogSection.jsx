@@ -1,3 +1,4 @@
+// components/BlogSection/BlogSection.jsx
 import React from "react"
 import { Link } from "react-router-dom"
 import "animate.css/animate.min.css"

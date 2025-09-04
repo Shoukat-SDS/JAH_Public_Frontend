@@ -1,4 +1,4 @@
-// BackToTop.jsx
+// components/BackToTop/BackToTop.jsx
 import React, { useState, useEffect } from "react";
 
 const BackToTop = () => {

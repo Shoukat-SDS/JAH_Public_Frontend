@@ -1,3 +1,4 @@
+// components/HeroSection/HeroSection.jsx
 import { Link } from "react-router-dom"
 
 export default function HeroSection({ title, breadcrumbs = [] }) {
