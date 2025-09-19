@@ -1,4 +1,4 @@
-// src/data/departmentsData.js
+// data/departmentsData.js
 import causeImage from '../assets/causeImage.png'
 
 const departmentsData = [

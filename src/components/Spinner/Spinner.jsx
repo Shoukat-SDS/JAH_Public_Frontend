@@ -1,3 +1,4 @@
+// components/Spinner/Spinner.jsx
 import { useState, useEffect } from "react"
 
 export default function Spinner() {

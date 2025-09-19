@@ -1,4 +1,4 @@
-// Testimonial.jsx
+// components/Testimonial/Testimonial.jsx
 import React from "react";
 import Slider from "react-slick";
 import TestimonialImage from '../../assets/testimonial-1.jpg'

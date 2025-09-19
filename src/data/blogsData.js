@@ -1,3 +1,4 @@
+// data/blogsData.js
 import Image from "../assets/blog-1.jpg"
 import Image1 from "../assets/blog-2.jpg"
 import Image2 from "../assets/blog-3.jpg"

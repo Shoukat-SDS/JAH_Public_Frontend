@@ -1,3 +1,4 @@
+// data/itemsData.js
 import causeImage from '../assets/causeImage.png'
 
 const itemsData = [

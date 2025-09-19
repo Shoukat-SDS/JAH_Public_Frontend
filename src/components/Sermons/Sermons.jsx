@@ -1,5 +1,4 @@
 // components/Sermons/Sermons.jsx
-
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "../../assets/sermon-1.jpg"
