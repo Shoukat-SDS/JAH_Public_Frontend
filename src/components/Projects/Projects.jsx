@@ -35,9 +35,9 @@ const iconMap = {
 }
 
 const Projects = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 100 });
+  // }, []);
 
   return (
     <div className="container-fluid activities py-5">
@@ -49,7 +49,7 @@ const Projects = () => {
         <div className="row g-4">
           {projectsData.map((item, index) => (
             <div key={index} className="col-lg-6 col-xl-4">
-              <div className="activities-item p-4" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
+              <div className="activities-item p-4" data-aos="fade-up" data-aos-delay={`${index * 10}`}>
                 <div className="d-flex flex-column justify-content-center align-items-center gap-2 text-center">
                   <div className="me-4 primary icon">{iconMap[item.icon]}</div>
                   <div>

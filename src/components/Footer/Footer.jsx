@@ -39,8 +39,10 @@ const Footer = () => {
                 JAMAT-E-<span className="secondary">AHLE HADIS</span>
               </h4>
               <p className="mb-4 text-secondary">
-                Nostrud exertation ullamco labor nisi aliquip ex ea commodo consequat duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                Jamat-e-Ahle Hadis is serving the community by promoting Islamic and modern
+                education, building mosques, running free medical facilities, and supporting
+                underprivileged families across Karachi. Together, we aim to create a society
+                rooted in faith, knowledge, and compassion.
               </p>
               <Link to={"/donate"} className="btn btn-bg-primary text-white py-2 px-4">
                 Donate Now
@@ -52,6 +54,7 @@ const Footer = () => {
           <div className="col-md-6 col-lg-6 col-xl-3">
             <div className="footer-item mt-5">
               <h4 className="text-light mb-4">Contact</h4>
+              <p className="text-secondary mb-3">Reach us for donations, volunteering, or inquiries.</p>
               <div className="d-flex flex-column">
                 <h6 className="secondary mb-0">Our Address</h6>
                 <div className="d-flex align-items-center border-bottom py-4">
@@ -149,18 +152,19 @@ const Footer = () => {
                 {[
                   "Home",
                   "About Us",
-                  "Our Features",
-                  "Contact us",
-                  "Our Blog",
-                  "Our Events",
-                  "Donations",
-                  "Sermons",
+                  "Projects",
+                  "Campuses",
+                  "Mosques",
+                  "Medical Services",
+                  "Future Plans",
+                  "Contact",
                 ].map((link, i) => (
                   <a key={i} className="text-body text-white-50 mb-2 text-decoration-none" href="#">
                     <i className="fa fa-check secondary me-2"></i>
                     {link}
                   </a>
                 ))}
+
               </div>
             </div>
           </div>
@@ -169,7 +173,7 @@ const Footer = () => {
           <div className="col-md-6 col-lg-6 col-xl-3">
             <div className="footer-item mt-5">
               <h4 className="text-light mb-4">Our Campuses</h4>
-              
+<p className="text-secondary">Spreading knowledge across Karachi through our campuses:</p>
               <ul className="list-unstyled text-white-50">
                 <li className="mb-2">• Jamia Dar-ul-Hadith Rehmania, Soldier Bazar</li>
                 <li className="mb-2">• Madrasa Bait-us-Salaam School, Main Campus, Azizabad</li>
@@ -185,7 +189,8 @@ const Footer = () => {
         <div className="border-top border-secondary pb-4"></div>
         <div className="row">
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white-50">
-            &copy; <a className="border-bottom secondary" href="#">Site</a>, All Right Reserved.
+            &copy; <a className="border-bottom secondary" href="#">Jamat-e-Ahle Hadis</a>, All Rights Reserved.
+
           </div>
           <div className="col-md-6 text-center text-md-end text-white">
             <span className="text-white-50">Designed with</span> 💗

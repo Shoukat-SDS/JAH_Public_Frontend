@@ -195,10 +195,20 @@ h6,
 
 .navbar-toggler {
   background: var(--bs-secondary);
-  color: var(--bs-light) !important;
+  color: #245b5a !important;
   padding: 10px 20px;
-  border: 2px solid var(--bs-primary) !important;
+  border: 2px solid #245b5a !important;
   box-shadow: none !important;
+}
+
+.navbar-toggler .text-primary {
+  color: #245b5a !important;
+}
+
+@media screen and (max-width: 767px) {
+  .fixed-top.container-fluid, .fixed-top .container  {
+    padding: 0;
+  }
 }
 /*** Navbar End ***/
 

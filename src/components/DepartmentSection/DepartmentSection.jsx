@@ -24,7 +24,7 @@ const DepartmentSection = () => {
                 />
                 <div className="card-body text-center">
                   <h4 className="primary mb-3">{dept.title}</h4>
-                  <p className="mb-4">{dept.desc}</p>
+                  <p className="mb-4" style={{ WebkitLineClamp: 3, display: "-webkit-box", WebkitBoxOrient: "vertical", overflow: "hidden" }}>{dept.desc}</p>
                   <Link
                     to={`/departments/${dept.id}`}
                     className="btn btn-bg-primary text-white px-4 py-2"

@@ -1,38 +1,38 @@
 // src/data/departmentsData.js
-// import eduImg from "../assets/education.jpg"
-// import welfareImg from "../assets/welfare.jpg"
-// import masjidImg from "../assets/masjid.jpg"
 import causeImage from '../assets/causeImage.png'
 
 const departmentsData = [
   {
     id: "education",
     title: "Education",
-    desc: "Providing quality Islamic and modern education across multiple campuses.",
+    desc: "Delivering both Islamic and modern education through dedicated campuses.",
     image: causeImage,
     details: `
-      Our Education department is focused on religious and worldly education. 
-      We run schools, madaris, and learning centers for both children and adults.
+      Our Education Department ensures access to quality learning that blends 
+      religious and contemporary studies. We run schools, madaris, and adult 
+      learning programs to empower students with both faith and knowledge.
     `,
   },
   {
     id: "welfare",
     title: "Welfare",
-    desc: "Supporting the community through health, food, and financial aid.",
+    desc: "Empowering families with health, food, and financial assistance.",
     image: causeImage,
     details: `
-      The Welfare department provides free dispensaries, ration distribution, 
-      and support programs for underprivileged families.
+      The Welfare Department provides free healthcare facilities, ration 
+      distribution, widow and orphan support, as well as micro-finance programs 
+      to uplift underprivileged communities.
     `,
   },
   {
     id: "masajid",
     title: "Masajid",
-    desc: "Building and maintaining mosques for the community.",
+    desc: "Building, maintaining, and serving community mosques.",
     image: causeImage,
     details: `
-      Our Masajid department is responsible for mosque construction, 
-      maintenance, and religious gatherings for the community.
+      Our Masajid Department is devoted to constructing and maintaining mosques, 
+      ensuring they remain centers of worship, learning, and community guidance 
+      for all believers.
     `,
   },
 ]

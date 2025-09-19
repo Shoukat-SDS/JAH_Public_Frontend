@@ -6,9 +6,13 @@ const blogsData = [
   {
     id: "1",
     title: "Importance of “Pillar” of Islam",
+    slug: "importance-of-pillar-of-islam",
     img: Image,
-    date: "01 Jan 2045",
+    date: "2016-01-01",
+    author: "Admin",
+    category: "Islamic Practices",
     comments: 12,
+    excerpt: "The five pillars of Islam are the foundation of faith, guiding Muslims in worship and daily life...",
     content: `
 The five pillars of Islam are the core beliefs and practices of the religion. They are:
 
@@ -26,9 +30,13 @@ The five pillars of Islam are a beautiful and meaningful way for Muslims to live
   {
     id: "2",
     title: "How to get closer to Allah",
+    slug: "how-to-get-closer-to-allah",
     img: Image1,
-    date: "01 Jan 2045",
+    date: "2017-01-01",
+    author: "Admin",
+    category: "Spiritual Growth",
     comments: 8,
+    excerpt: "Getting closer to Allah is a journey of faith, repentance, and good deeds. Here's how to build a stronger connection...",
     content: `
 Getting closer to Allah is a journey that involves both an internal and external transformation. It's about building a deeper connection with your Creator through your beliefs, actions, and daily life. Here are some key ways to foster that relationship:
 
@@ -73,9 +81,13 @@ In essence, getting closer to Allah is a lifelong journey of striving to live a 
   {
     id: "3",
     title: "Importance of Hajj in Islam",
+    slug: "importance-of-hajj-in-islam",
     img: Image2,
-    date: "01 Jan 2045",
+    date: "2015-01-01",
+    author: "Admin",
+    category: "Hajj & Umrah",
     comments: 15,
+    excerpt: "Hajj is the fifth pillar of Islam, a journey of obedience, purification, and unity among Muslims worldwide...",
     content: `
 Hajj, the pilgrimage to Mecca, is the fifth and final pillar of Islam. For every Muslim who is physically and financially able, it is a once-in-a-lifetime obligation that represents the pinnacle of their religious life. More than just a set of rituals, Hajj is a profound spiritual, physical, and emotional journey with immense importance for both the individual and the global Muslim community.
 
