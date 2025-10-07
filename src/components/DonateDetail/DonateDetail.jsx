@@ -1,9 +1,11 @@
 // components/DonateDetail/DonateDetail.jsx
-import React, { useState } from "react"
-import { useParams } from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { useParams, Link } from "react-router-dom"
 import HeroSection from "../../components/HeroSection/HeroSection"
 import itemsData from "../../data/itemsData"
-import Swal from "sweetalert2";
+import Swal from "sweetalert2"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const donationTypes = [
     { id: 'sadaqa-wajiba', label: 'Sadaqa-e-Wajiba' },
@@ -27,8 +29,20 @@ const DonateDetail = () => {
 
     const [donationType, setDonationType] = useState("")
     const [invoice, setInvoice] = useState(null)
+    const [copiedField, setCopiedField] = useState("")
 
-    if (!item) return <p className="text-center py-20">Item not found</p>
+    useEffect(() => {
+        AOS.init({ duration: 1000 })
+    }, [])
+
+    if (!item) return (
+        <div className="container py-5 text-center">
+            <h2 className="secondary">Item not found</h2>
+            <Link to="/donate" className="btn btn-bg-primary text-white mt-3">
+                Return to Donations
+            </Link>
+        </div>
+    )
 
     const handleInvoiceChange = (e) => {
         const file = e.target.files[0]
@@ -41,6 +55,50 @@ const DonateDetail = () => {
                 localStorage.setItem('lastInvoice', base64String)
             }
             reader.readAsDataURL(file)
+        }
+    }
+
+    const handleCopy = async (text, field) => {
+        try {
+            // If Clipboard API is available and allowed, use it
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                await navigator.clipboard.writeText(text)
+            } else {
+                // Fallback for insecure contexts or older browsers:
+                const textarea = document.createElement('textarea')
+                textarea.value = text
+                textarea.setAttribute('readonly', '')
+                textarea.style.position = 'absolute'
+                textarea.style.left = '-9999px'
+                document.body.appendChild(textarea)
+                textarea.select()
+                document.execCommand('copy')
+                document.body.removeChild(textarea)
+            }
+
+            setCopiedField(field)
+            setTimeout(() => setCopiedField(""), 2000)
+
+            Swal.fire({
+                icon: "success",
+                title: "Copied!",
+                text: "The text has been copied to your clipboard",
+                timer: 1500,
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false
+            })
+        } catch (err) {
+            console.error("Copy failed", err)
+            Swal.fire({
+                icon: "error",
+                title: "Copy failed",
+                text: "Could not copy to clipboard. Please copy manually.",
+                toast: true,
+                position: 'top-end',
+                timer: 2000,
+                showConfirmButton: false
+            })
         }
     }
 
@@ -100,83 +158,149 @@ const DonateDetail = () => {
             />
 
             <div className="container py-5">
-                <div className="row align-items-center g-5">
-                    {/* Left Image */}
-                    <div className="col-md-6">
-                        <img
-                            src={item.img}
-                            alt={item.title}
-                            className="img-fluid rounded shadow"
-                            style={{ height: "320px", objectFit: "cover", width: "100%" }}
-                        />
+                <div className="row g-5 justify-content-center">
+                    {/* Left Column */}
+                    <div className="col-lg-5" data-aos="fade-right">
+                        <div className="position-relative overflow-hidden rounded-4 shadow-lg h-100">
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="img-fluid w-100"
+                                style={{ 
+                                    height: "100%", 
+                                    minHeight: "400px",
+                                    objectFit: "cover",
+                                    transition: "transform 0.5s" 
+                                }}
+                                onMouseOver={(e) => e.target.style.transform = "scale(1.1)"}
+                                onMouseOut={(e) => e.target.style.transform = "scale(1)"}
+                            />
+                            <div className="position-absolute bottom-0 start-0 w-100 p-4" 
+                                style={{ background: "rgba(0,0,0,0.7)" }}>
+                                <h2 className="text-white mb-2">{item.title}</h2>
+                                <p className="text-light mb-0">
+                                    Category: {Array.isArray(item.category) ? item.category.join(', ') : item.category}
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Right Details */}
-                    <div className="col-md-6">
-                        <h2 className="fw-bold mb-2 primary">{item.title}</h2>
-
-                        <p className="secondary mb-3">
-                            <strong className="text-muted fs-6">Category:</strong> {item.category}
-                        </p>
-
-                        <div className="mb-3">
-                            <label className="form-label fw-medium primary">Type of Donation:</label>
-                            <select
-                                value={donationType}
-                                onChange={(e) => setDonationType(e.target.value)}
-                                className="form-select"
-                            >
-                                <option value="">Select donation type</option>
-                                {donationTypes.map(type => (
-                                    <option key={type.id} value={type.id}>
-                                        {type.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        <div className="bank-accounts mb-3">
-                            <h5 className="fw-bold mb-3 primary">Bank Account Details:</h5>
-                            {bankAccounts.map((account, index) => (
-                                <div key={index} className="card mb-3 border-primary border-opacity-25">
-                                    <div className="card-body">
-                                        <h6 className="card-title fw-bold secondary">{account.bankName}</h6>
-                                        <p className="card-text mb-1">
-                                            <small className="text-muted">Account Title:</small> {account.accountTitle}
-                                        </p>
-                                        <p className="card-text mb-1">
-                                            <small className="text-muted">Account Number:</small> {account.accountNumber}
-                                        </p>
-                                        <p className="card-text mb-0">
-                                            <small className="text-muted">IBAN:</small> {account.iban}
-                                        </p>
-                                    </div>
+                    {/* Right Column */}
+                    <div className="col-lg-7" data-aos="fade-left">
+                        <div className="card border-0 shadow-lg">
+                            <div className="card-body p-4">
+                                <h4 className="secondary mb-4">Make Your Donation</h4>
+                                
+                                {/* Donation Type Selection */}
+                                <div className="mb-4">
+                                    <label className="form-label fw-medium primary">Type of Donation:</label>
+                                    <select
+                                        value={donationType}
+                                        onChange={(e) => setDonationType(e.target.value)}
+                                        className="form-select form-select-lg"
+                                    >
+                                        <option value="">Select donation type</option>
+                                        {donationTypes.map(type => (
+                                            <option key={type.id} value={type.id}>
+                                                {type.label}
+                                            </option>
+                                        ))}
+                                    </select>
                                 </div>
-                            ))}
-                        </div>
 
-                        <div className="mb-4">
-                            <label className="form-label fw-medium primary">Upload Invoice:</label>
-                            <input
-                                type="file"
-                                onChange={handleInvoiceChange}
-                                className="form-control"
-                                accept="image/*,.pdf"
-                            />
-                            {invoice && (
-                                <small className="text-success d-block mt-2">
-                                    ✓ Invoice uploaded successfully
-                                </small>
-                            )}
-                        </div>
+                                {/* Bank Account Details */}
+                                <div className="mb-4">
+                                    <h5 className="primary mb-3">
+                                        <i className="fas fa-university me-2"></i>
+                                        Bank Account Details
+                                    </h5>
+                                    {bankAccounts.map((account, index) => (
+                                        <div key={index} className="card bg-light border-0 mb-3">
+                                            <div className="card-body">
+                                                <h6 className="secondary mb-3">{account.bankName}</h6>
+                                                
+                                                <div className="d-flex justify-content-between align-items-center mb-2">
+                                                    <div>
+                                                        <small className="text-muted d-block">Account Title</small>
+                                                        <strong>{account.accountTitle}</strong>
+                                                    </div>
+                                                    <button 
+                                                        type="button"
+                                                        aria-label="Copy account title"
+                                                        className="btn btn-sm secondary"
+                                                        onClick={() => handleCopy(account.accountTitle, 'title')}
+                                                    >
+                                                        <i className={`fas ${copiedField === 'title' ? 'fa-check' : 'fa-copy'}`}></i>
+                                                    </button>
+                                                </div>
 
-                        <button
-                            onClick={handleDonate}
-                            className="btn btn-bg-primary text-white fw-bold px-4 py-2"
-                            disabled={!donationType || !invoice}
-                        >
-                            SUBMIT DONATION
-                        </button>
+                                                <div className="d-flex justify-content-between align-items-center mb-2">
+                                                    <div>
+                                                        <small className="text-muted d-block">Account Number</small>
+                                                        <strong>{account.accountNumber}</strong>
+                                                    </div>
+                                                    <button 
+                                                        type="button"
+                                                        aria-label="Copy account number"
+                                                        className="btn btn-sm secondary"
+                                                        onClick={() => handleCopy(account.accountNumber, 'number')}
+                                                    >
+                                                        <i className={`fas ${copiedField === 'number' ? 'fa-check' : 'fa-copy'}`}></i>
+                                                    </button>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <small className="text-muted d-block">IBAN</small>
+                                                        <strong>{account.iban}</strong>
+                                                    </div>
+                                                    <button 
+                                                        type="button"
+                                                        aria-label="Copy IBAN"
+                                                        className="btn btn-sm secondary"
+                                                        onClick={() => handleCopy(account.iban, 'iban')}
+                                                    >
+                                                        <i className={`fas ${copiedField === 'iban' ? 'fa-check' : 'fa-copy'}`}></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* Invoice Upload */}
+                                <div className="mb-4">
+                                    <label className="form-label primary">
+                                        <i className="fas fa-file-invoice me-2"></i>
+                                        Upload Payment Invoice
+                                    </label>
+                                    <div className="input-group">
+                                        <input
+                                            type="file"
+                                            onChange={handleInvoiceChange}
+                                            className="form-control form-control-lg"
+                                            accept="image/*,.pdf"
+                                        />
+                                    </div>
+                                    {invoice && (
+                                        <div className="alert alert-success mt-2 d-flex align-items-center">
+                                            <i className="fas fa-check-circle me-2"></i>
+                                            Invoice uploaded successfully
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Submit Button */}
+                                <button
+                                    onClick={handleDonate}
+                                    className="btn btn-bg-primary text-white w-100 py-3"
+                                    disabled={!donationType || !invoice}
+                                >
+                                    <i className="fas fa-heart me-2"></i>
+                                    {!donationType || !invoice ? 'Complete Required Fields' : 'Submit Donation'}
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

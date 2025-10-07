@@ -2,9 +2,9 @@
 import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import AboutImage from "../../assets/images.jpeg"
-import AboutImage1 from "../../assets/about-2.jpg"
-import AboutImage2 from "../../assets/about-3.jpg"
+import AboutImage from "../../assets/aboutlargeimage.jpg"
+import AboutImage1 from "../../assets/Aboutmasjid.jpg"
+import AboutImage2 from "../../assets/Aboutmasjid2.jpg"
 import ChildImage from "../../assets/about-child.jpg"
 
 export default function About() {
@@ -48,11 +48,9 @@ export default function About() {
             <p className="fs-5 text-uppercase primary">About Jamat-e-Ahle Hadis</p>
             <h1 className="display-5 pb-4 m-0">Serving Faith, Education & Humanity</h1>
             <p className="pb-4">
-              Jamat-e-Ahle Hadis is dedicated to spreading both Islamic and contemporary education
-              across multiple campuses in Karachi, while also serving communities through mosques,
-              medical care, and social welfare programs. From spiritual guidance to modern learning,
-              from free healthcare to orphan and widow support — our mission is to nurture both faith
-              and humanity.
+              Jamat Ahl-e-Hadis is a dedicated Islamic organization committed to spreading both religious and worldly education under the light of the Qur'an and Sunnah.
+              With campuses located in Azizabad, FB Area Block-7, Surjani Town (Sector-7B), and Soldier Bazaar (Dar-ul-Hadith Rahmaniya), our mission is to nurture individuals who are spiritually enlightened, academically capable, and socially responsible.
+              Through our network of Masajid, Welfare Services, and Medical Programs, we serve thousands of people daily — building an Islamic community grounded in knowledge, compassion, and service.
             </p>
 
             <div className="row g-4 mb-4">
@@ -63,8 +61,7 @@ export default function About() {
                   </span>
                   <div className="ms-4">
                     <h5>Our Vision</h5>
-                    <p>To establish a society rooted in Quran and Sunnah, where every individual
-                      has access to education, healthcare, and a dignified life.</p>
+                    <p>To establish a faith-driven and progressive Islamic society where knowledge, worship, and service unite to uplift humanity.</p>
                   </div>
                 </div>
               </div>
@@ -76,8 +73,7 @@ export default function About() {
                   </span>
                   <div className="ms-4">
                     <h5>Our Mission</h5>
-                    <p>To provide quality Deeni and Dunyavi education, build and maintain mosques,
-                      serve the underprivileged with healthcare and social support.</p>
+                    <p>To empower individuals through Islamic and modern education, welfare programs, and sustainable community initiatives rooted in the principles of the Qur'an and Sunnah.</p>
                   </div>
                 </div>
               </div>

@@ -37,9 +37,9 @@ export default function Topbar() {
               <Nav.Link as={NavLink} to="/projects">
                 Projects
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/blog">
+              {/* <Nav.Link as={NavLink} to="/blog">
                 Blogs
-              </Nav.Link>
+              </Nav.Link> */}
 
               <Nav.Link as={NavLink} to="/contact">
                 Contact

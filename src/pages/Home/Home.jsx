@@ -12,8 +12,8 @@ export default function Home() {
             <Hero />
             <About />
             <Projects />
-            <Sermon />
-            <BlogSection />
+            {/* <Sermon />
+            <BlogSection /> */}
         </>
     )
 }
