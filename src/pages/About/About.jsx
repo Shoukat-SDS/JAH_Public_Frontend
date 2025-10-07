@@ -2,7 +2,7 @@
 import React from 'react'
 import HeroSection from '../../components/HeroSection/HeroSection'
 import AboutSection from '../../components/About/About'
-import TeamSection from '../../components/Team/Team'
+import Projects from '../../components/Projects/Projects'
 
 const About = () => {
   return (
@@ -16,7 +16,8 @@ const About = () => {
       />
 
       <AboutSection />
-      <TeamSection />
+      <Projects />
+      {/* <TeamSection /> */}
     </div>
   )
 }
