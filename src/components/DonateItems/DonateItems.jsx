@@ -8,20 +8,30 @@ const DonateItems = ({ onDonate, category }) => {
   const [selectedCategory, setSelectedCategory] = useState(category || "All")
   const [filteredItems, setFilteredItems] = useState(itemsData)
 
+  // Check URL parameters for category filter
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const urlCategory = urlParams.get('category')
+    if (urlCategory && !category) {
+      setSelectedCategory(urlCategory)
+    }
+  }, [])
+
   // 🔹 Jab bhi category prop change ho → filter update karo
   useEffect(() => {
-    if (category && category !== "All") {
+    const effectiveCategory = category || selectedCategory
+    if (effectiveCategory && effectiveCategory !== "All") {
       const filtered = itemsData.filter((item) =>
         Array.isArray(item.category)
-          ? item.category.includes(category)
-          : item.category === category
+          ? item.category.includes(effectiveCategory)
+          : item.category === effectiveCategory
       )
       setFilteredItems(filtered)
-      setSelectedCategory(category) // ensure UI bhi sync rahe
+      setSelectedCategory(effectiveCategory) // ensure UI bhi sync rahe
     } else {
       setFilteredItems(itemsData)
     }
-  }, [category])
+  }, [category, selectedCategory])
 
   // 🔹 Categories sirf tab dikhani hain jab prop category na di ho
   const categories = [
@@ -29,36 +39,36 @@ const DonateItems = ({ onDonate, category }) => {
     ...new Set(itemsData.flatMap((item) => item.category)),
   ]
 
-  // 🔹 Agar user manually button select kare
-  useEffect(() => {
-    if (!category) {
-      if (selectedCategory === "All") {
-        setFilteredItems(itemsData)
-      } else {
-        const filtered = itemsData.filter((item) =>
-          Array.isArray(item.category)
-            ? item.category.includes(selectedCategory)
-            : item.category === selectedCategory
-        )
-        setFilteredItems(filtered)
-      }
+  // Handle manual category selection and update URL
+  const handleCategoryChange = (cat) => {
+    setSelectedCategory(cat)
+    // Update URL without page reload
+    const url = new URL(window.location)
+    if (cat === 'All') {
+      url.searchParams.delete('category')
+    } else {
+      url.searchParams.set('category', cat)
     }
-  }, [selectedCategory, category])
+    window.history.replaceState({}, '', url)
+  }
 
   return (
     <div className="container py-4">
       {/* Filter buttons sirf jab category prop na ho */}
       {!category && (
-        <div className="d-flex justify-content-center gap-4 mb-3">
+        <div className="d-flex justify-content-center gap-4 mb-4">
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`px-4 py-2 rounded-md ${
-                selectedCategory === cat ? "btn btn-success" : "btn btn-light"
+              className={`px-4 py-2 rounded-pill border-0 transition-all ${
+                selectedCategory === cat 
+                  ? "btn btn-bg-primary text-white shadow" 
+                  : "btn btn-light text-muted hover-shadow"
               }`}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
+              style={{ transition: 'all 0.3s ease' }}
             >
-              {cat}
+              {cat === 'All' ? 'All Projects' : cat}
             </button>
           ))}
         </div>
@@ -72,7 +82,8 @@ const DonateItems = ({ onDonate, category }) => {
               <img
                 src={item.img}
                 alt={item.title}
-                className="card-img-top w-100 h-64 object-cover"
+                style={{ aspectRatio: '16 / 9', objectFit: 'cover' }}
+                className="card-img-top w-100 h-64 object-cover aspect-ratio-3"
               />
               <div className="overlay position-absolute inset-0 h-100 w-100 d-flex align-items-center justify-content-center transition-opacity">
                 <button

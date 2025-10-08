@@ -1,5 +1,12 @@
 // data/itemsData.js
-import causeImage from "../assets/causeImage.png"
+import AdultEducationProgtram from '../assets/Adult-Education-Progtram.jpg'
+import BaitussalamSchool from '../assets/Baitussalam-School.jpg'
+import FreeMedicalDispensory from '../assets/Free-Medical-Dispensory.jpg'
+import MosqueDevelopment from '../assets/Mousue-Development.jpg'
+import BaitussalamEyeClinic from '../assets/Baitussalam-Eye-Clinic.jpg'
+import Solar from '../assets/Solar.jpg'
+import RO from '../assets/Ro.jpg'
+import ScholorShip from '../assets/Scholorship.jpg'
 
 const itemsData = [
   // --- Education ---
@@ -7,7 +14,7 @@ const itemsData = [
     id: 1,
     title: "Baitusslam School",
     category: ["Education"],
-    img: causeImage,
+    img: BaitussalamSchool,
     desc: "Providing quality Islamic and modern education for children.",
     slug: "baitussalam-school",
   },
@@ -15,7 +22,7 @@ const itemsData = [
     id: 2,
     title: "Baitusslam Madrassa",
     category: ["Education"],
-    img: causeImage,
+    img: AdultEducationProgtram,
     desc: "Focused on Islamic studies and Quranic education.",
     slug: "baitussalam-madrassa",
   },
@@ -23,109 +30,70 @@ const itemsData = [
     id: 3,
     title: "Student Sponsorship",
     category: ["Education"],
-    img: causeImage,
+    img: ScholorShip,
     desc: "Sponsor tuition, books, and uniforms for a deserving student.",
     slug: "student-sponsorship",
-  },
-  {
-    id: 4,
-    title: "Scholarship Endowment",
-    category: ["Education"],
-    img: causeImage,
-    desc: "Fund higher education scholarships for talented students.",
-    slug: "scholarship-endowment",
   },
 
   // --- Masajid ---
   {
-    id: 5,
+    id: 4,
     title: "Masjid Baitussalam",
-    category: ["Masajid"],
-    img: causeImage,
+    category: ["Mosque"],
+    img: MosqueDevelopment,
     desc: "A mosque serving the Azizabad community for prayers and gatherings.",
     slug: "masjid-baitussalam",
   },
   {
-    id: 6,
+    id: 5,
     title: "Monthly Masjid Support",
-    category: ["Masajid"],
-    img: causeImage,
+    category: ["Mosque"],
+    img: MosqueDevelopment,
     desc: "Cover operational expenses like electricity, water, and maintenance.",
     slug: "monthly-masjid-support",
   },
   {
-    id: 7,
+    id: 6,
     title: "Solar System Fund",
-    category: ["Masajid"],
-    img: causeImage,
+    category: ["Mosque"],
+    img: Solar,
     desc: "Help install solar energy systems in masajid for sustainability.",
     slug: "solar-system-fund",
   },
   {
-    id: 8,
+    id: 7,
     title: "RO Plant Installation",
-    category: ["Masajid", "Welfare"],
-    img: causeImage,
+    category: ["Mosque", "Welfare"],
+    img: RO,
     desc: "Sponsor clean water facilities for worshippers.",
     slug: "ro-plant-installation",
   },
 
   // --- Welfare ---
-  {
-    id: 9,
-    title: "Kifaalat Program",
-    category: ["Welfare"],
-    img: causeImage,
-    desc: "Sponsorship program for orphans, widows and disabled individuals.",
-    slug: "kifaalat-program",
-  },
+ 
   {
     id: 10,
-    title: "Ration Box",
-    category: ["Welfare"],
-    img: causeImage,
-    desc: "Provide monthly food essentials for a needy family.",
-    slug: "ration-box",
-  },
-  {
-    id: 11,
     title: "Free Dispensary Fund",
-    category: ["Welfare"],
-    img: causeImage,
+    category: ["Welfare", "Health"],
+    img: FreeMedicalDispensory,
     desc: "Help provide free medicines and healthcare for patients.",
     slug: "free-dispensary-fund",
   },
   {
-    id: 12,
+    id: 11,
     title: "Eye Clinic Donation",
-    category: ["Welfare"],
-    img: causeImage,
+    category: ["Welfare", "Health"],
+    img: BaitussalamEyeClinic,
     desc: "Support affordable eye care and treatment for the poor.",
     slug: "eye-clinic-donation",
-  },
-  {
-    id: 13,
-    title: "Medicine Distribution",
-    category: ["Welfare"],
-    img: causeImage,
-    desc: "Providing free medicines to patients daily through dispensaries.",
-    slug: "medicine-distribution",
-  },
-  {
-    id: 14,
-    title: "R.O Plant",
-    category: ["Welfare"],
-    img: causeImage,
-    desc: "Installation of RO plants to provide clean drinking water in communities.",
-    slug: "ro-plant",
   },
 
   // --- Health ---
   {
-    id: 15,
+    id: 14,
     title: "Medical Lab Equipment",
-    category: ["Health"],
-    img: causeImage,
+    category: ["Welfare", "Health"],
+    img: BaitussalamEyeClinic,
     desc: "Help establish a diagnostic laboratory for community healthcare.",
     slug: "medical-lab-equipment",
   },

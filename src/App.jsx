@@ -13,8 +13,6 @@ import ProjectDetails from "./pages/ProjectDetails/PorjectDetails"
 import Projects from "./pages/Projects/Projects"
 import Department from "./pages/Department/Department"
 import DepartmentDetail from "./pages/Department/DepartmentDetails"
-import BlogDetail from "./pages/Blog/BlogDetail"
-import Blog from "./pages/Blog/Blog"
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
 
 function App() {
@@ -37,8 +35,6 @@ function App() {
             <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="/departments" element={<Department />} />
             <Route path="/departments/:id" element={<DepartmentDetail />} />
-            {/* <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/blog" element={<Blog />} /> */}
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>

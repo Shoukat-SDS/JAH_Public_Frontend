@@ -1,12 +1,15 @@
 // data/departmentsData.js
 import causeImage from '../assets/causeImage.png'
+import AdultEducationProgtram from '../assets/Adult-Education-Progtram.jpg'
+import MosqueDevelopment from '../assets/Mousue-Development.jpg'
+import FreeMedicalDispensory from '../assets/Free-Medical-Dispensory.jpg'
 
 const departmentsData = [
   {
     id: "education",
     title: "Education",
     desc: "Integrating Islamic values with modern education across multiple campuses.",
-    image: causeImage,
+    image: AdultEducationProgtram,
     sections: [
       {
         heading: "Overview",
@@ -39,7 +42,7 @@ const departmentsData = [
     id: "welfare",
     title: "Welfare",
     desc: "Serving humanity through healthcare, aid, and empowerment programs.",
-    image: causeImage,
+    image: FreeMedicalDispensory,
     sections: [
       {
         heading: "Overview",
@@ -72,7 +75,7 @@ const departmentsData = [
     id: "masajid",
     title: "Masajid",
     desc: "Developing and sustaining masajid as centers of worship and learning.",
-    image: causeImage,
+    image: MosqueDevelopment,
     sections: [
       {
         heading: "Overview",

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="container-fluid footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div className="container-fluid footer pt-0 wow fadeIn" data-wow-delay="0.1s">
       <div className="container py-5">
         <div className="row py-5">
           <div className="col-lg-7">
@@ -189,7 +189,7 @@ const Footer = () => {
         <div className="border-top border-secondary pb-4"></div>
         <div className="row">
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white-50">
-            &copy; <a className="border-bottom secondary" href="#">Jamat-e-Ahle Hadis</a>, All Rights Reserved.
+            &copy; <a className="border-bottom secondary" href="https://www.jah.org">Jamat-e-Ahle Hadis</a>, All Rights Reserved.
 
           </div>
           <div className="col-md-6 text-center text-md-end text-white">

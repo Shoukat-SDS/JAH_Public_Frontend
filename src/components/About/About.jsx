@@ -5,7 +5,6 @@ import "aos/dist/aos.css"
 import AboutImage from "../../assets/aboutlargeimage.jpg"
 import AboutImage1 from "../../assets/Aboutmasjid.jpg"
 import AboutImage2 from "../../assets/Aboutmasjid2.jpg"
-import ChildImage from "../../assets/about-child.jpg"
 
 export default function About() {
   useEffect(() => {
@@ -13,12 +12,12 @@ export default function About() {
   }, [])
 
   return (
-    <div className="container-fluid about py-5">
+    <div className="container-fluid about py-0">
       <div className="container py-5">
-        <div className="row g-5 mb-5">
-          <div className="col-xl-6">
+        <div className="row mb-5">
+          <div className="col-lg-6">
             <div className="row g-4">
-              <div className="col-6">
+              <div className="col-6 d-none d-md-block">
                 <img
                   src={AboutImage}
                   className="img-fluid h-100 animate__animated animate__zoomIn"
@@ -27,16 +26,16 @@ export default function About() {
                   alt=""
                 />
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-sm-12">
                 <img
                   src={AboutImage1}
-                  className="img-fluid pb-3 animate__animated animate__zoomIn"
+                  className="img-fluid pb-3 w-100 animate__animated animate__zoomIn"
                   data-aos="zoom-in"
                   alt=""
                 />
                 <img
                   src={AboutImage2}
-                  className="img-fluid pt-3 animate__animated animate__zoomIn"
+                  className="img-fluid pt-3 w-100 animate__animated animate__zoomIn"
                   data-aos="zoom-in"
                   alt=""
                 />
@@ -44,7 +43,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="col-xl-6" data-aos="fade-up" data-aos-delay="500">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="500">
             <p className="fs-5 text-uppercase primary">About Jamat-e-Ahle Hadis</p>
             <h1 className="display-5 pb-4 m-0">Serving Faith, Education & Humanity</h1>
             <p className="pb-4">
