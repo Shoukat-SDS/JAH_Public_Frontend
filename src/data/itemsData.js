@@ -39,7 +39,7 @@ const itemsData = [
   {
     id: 4,
     title: "Masjid Baitussalam",
-    category: ["Mosque"],
+    category: ["Welfare"],
     img: MosqueDevelopment,
     desc: "A mosque serving the Azizabad community for prayers and gatherings.",
     slug: "masjid-baitussalam",
@@ -47,7 +47,7 @@ const itemsData = [
   {
     id: 5,
     title: "Monthly Masjid Support",
-    category: ["Mosque"],
+    category: ["Welfare"],
     img: MosqueDevelopment,
     desc: "Cover operational expenses like electricity, water, and maintenance.",
     slug: "monthly-masjid-support",
@@ -55,7 +55,7 @@ const itemsData = [
   {
     id: 6,
     title: "Solar System Fund",
-    category: ["Mosque"],
+    category: ["Welfare"],
     img: Solar,
     desc: "Help install solar energy systems in masajid for sustainability.",
     slug: "solar-system-fund",
@@ -63,7 +63,7 @@ const itemsData = [
   {
     id: 7,
     title: "RO Plant Installation",
-    category: ["Mosque", "Welfare"],
+    category: ["Welfare"],
     img: RO,
     desc: "Sponsor clean water facilities for worshippers.",
     slug: "ro-plant-installation",
