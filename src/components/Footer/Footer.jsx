@@ -155,7 +155,7 @@ const Footer = () => {
         <div className="row g-4 footer-inner">
           
           {/* Organization Info */}
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-4 col-md-6">
             <div className="footer-item">
               <div className="mb-4">
                 <h3 className="text-white fw-bold mb-2">
@@ -208,10 +208,10 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
-              <h4 className="text-white fw-bold mb-4">
+              <h5 className="text-white fw-bold mb-4">
                 <i className="fas fa-address-book me-2" style={{ color: "#b28721" }}></i>
                 Contact Information
-              </h4>
+              </h5>
               
               {/* Address */}
               <div className="card border-0 mb-4" 
@@ -291,12 +291,12 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-2 col-md-6">
             <div className="footer-item">
-              <h4 className="text-white fw-bold mb-4">
+              <h5 className="text-white fw-bold mb-4">
                 <i className="fas fa-sitemap me-2" style={{ color: "#b28721" }}></i>
                 Quick Navigation
-              </h4>
+              </h5>
               <div className="row g-2">
                 {navigationLinks.map((link, index) => (
                   <div key={index} className="col-12">
@@ -330,10 +330,10 @@ const Footer = () => {
           {/* Our Campuses */}
           <div className="col-lg-3 col-md-6">
             <div className="footer-item">
-              <h4 className="text-white fw-bold mb-4">
+              <h5 className="text-white fw-bold mb-4">
                 <i className="fas fa-university me-2" style={{ color: "#b28721" }}></i>
                 Our Campuses
-              </h4>
+              </h5>
               <p className="text-white-50 mb-4">Spreading knowledge across Karachi:</p>
               
               {campuses.map((campus, index) => (

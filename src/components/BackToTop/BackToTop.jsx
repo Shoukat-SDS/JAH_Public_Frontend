@@ -168,7 +168,7 @@ const BackToTop = () => {
       </div>
 
       {/* Custom Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes pulse {
           0% {
             transform: translate(-50%, -50%) scale(1);

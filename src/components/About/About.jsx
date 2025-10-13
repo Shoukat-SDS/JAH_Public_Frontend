@@ -14,7 +14,7 @@ export default function About() {
   const statistics = [
     { number: "200+", label: "Daily Patients", icon: "fas fa-user-md" },
     { number: "4", label: "Campuses", icon: "fas fa-university" },
-    { number: "1000+", label: "Students", icon: "fas fa-graduation-cap" },
+    { number: "1500+", label: "Students", icon: "fas fa-graduation-cap" },
     { number: "50", label: "Eye Treatment Cost", icon: "fas fa-eye", unit: "Rs." }
   ]
 

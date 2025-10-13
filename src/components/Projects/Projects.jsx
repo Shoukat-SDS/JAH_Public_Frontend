@@ -115,7 +115,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <style jsx>{`
+              <style>{`
                 .project-card:hover .overlay {
                   opacity: 1 !important;
                 }

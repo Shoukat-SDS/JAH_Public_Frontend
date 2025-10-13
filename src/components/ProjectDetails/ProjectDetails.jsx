@@ -250,7 +250,7 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .project-detail-card:hover img {
           transform: scale(1.05);
         }

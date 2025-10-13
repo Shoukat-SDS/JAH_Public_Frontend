@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import Logo from '../../assets/logo.png'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -45,8 +46,8 @@ export default function Hero() {
   const statistics = [
     { number: "4", label: "Campuses", icon: "fas fa-university" },
     { number: "200+", label: "Daily Patients", icon: "fas fa-user-md" },
-    { number: "1000+", label: "Students", icon: "fas fa-graduation-cap" },
-    { number: "60+", label: "Years Serving", icon: "fas fa-calendar-alt" }
+    { number: "1500+", label: "Students", icon: "fas fa-graduation-cap" },
+    { number: "73+", label: "Years Serving", icon: "fas fa-calendar-alt" }
   ]
 
   return (
@@ -134,10 +135,11 @@ export default function Hero() {
                    }}
                    data-aos="fade-right"
                    data-aos-delay="100">
-                <i className="fas fa-mosque text-white me-2" style={{ color: "#b28721" }}></i>
+                {/* <i className="fas fa-mosque text-white me-2" style={{ color: "#b28721" }}></i>
                 <span className="text-white fw-semibold" style={{ fontSize: "0.9rem", letterSpacing: "1px" }}>
                   JAMAT-E-AHLE HADIS
-                </span>
+                </span> */}
+                <img src={Logo} alt="Jamat-e-Ahle Hadis" style={{ maxHeight: "40px" }} />
               </div>
 
               {/* Dynamic Content */}
@@ -261,6 +263,67 @@ export default function Hero() {
 
           {/* Statistics Sidebar */}
           <div className="col-lg-4">
+            {/* Enhanced Heading Design */}
+            <div className="mb-4" data-aos="fade-left" data-aos-delay="600">
+              <div className="d-flex align-items-center mb-3">
+                <div className="me-3">
+                  <div 
+                    className="btn-lg-square rounded-circle d-flex align-items-center justify-content-center"
+                    style={{
+                      background: "linear-gradient(135deg, #b28721 0%, #d4a532 100%)",
+                      width: "50px",
+                      height: "50px",
+                      boxShadow: "0 4px 15px rgba(178, 135, 33, 0.3)"
+                    }}
+                  >
+                    <i className="fas fa-chart-line text-white fs-5"></i>
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-white fw-bold mb-1" 
+                      style={{ 
+                        fontSize: "1.8rem",
+                        letterSpacing: "0.5px"
+                      }}>
+                    Our Projects
+                  </h2>
+                  <p className="text-white-50 mb-0 small fw-medium">
+                    Making a difference every day
+                  </p>
+                </div>
+              </div>
+              
+              {/* Decorative Line */}
+              <div className="d-flex align-items-center">
+                <div 
+                  className="bg-secondary me-2"
+                  style={{
+                    width: "40px",
+                    height: "3px",
+                    borderRadius: "2px"
+                  }}
+                ></div>
+                <div 
+                  className="bg-white me-2"
+                  style={{
+                    width: "15px",
+                    height: "3px",
+                    borderRadius: "2px",
+                    opacity: "0.5"
+                  }}
+                ></div>
+                <div 
+                  className="bg-white"
+                  style={{
+                    width: "8px",
+                    height: "3px",
+                    borderRadius: "2px",
+                    opacity: "0.3"
+                  }}
+                ></div>
+              </div>
+            </div>
+            
             <div className="row g-3" data-aos="fade-left" data-aos-delay="700">
               {statistics.map((stat, index) => (
                 <div key={index} className="col-6">
@@ -304,12 +367,12 @@ export default function Hero() {
                     Connect with us for spiritual guidance, education, or medical assistance
                   </p>
                   <div className="d-flex gap-2 justify-content-center">
-                    <a href="tel:03212637154" 
+                    <a href="tel:03312247572" 
                        className="btn btn-sm btn-outline-light rounded-pill px-3"
                        style={{ fontSize: "0.8rem" }}>
                       <i className="fas fa-phone me-1"></i> Call
                     </a>
-                    <a href="https://wa.me/923212637154" 
+                    <a href="https://wa.me/923312247572" 
                        className="btn btn-sm rounded-pill px-3 text-white"
                        style={{ 
                          background: "#25D366",
@@ -344,7 +407,7 @@ export default function Hero() {
       </div>
 
       {/* Custom Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-30px); }

@@ -42,10 +42,6 @@
     opacity: 1 !important;
 }
 
-.dropdown-item.active, .dropdown-item:active {
-  background-color: #245b5a !important;
-}
-
 .blog-image {
   aspect-ratio: 16/9;
 }

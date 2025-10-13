@@ -98,7 +98,7 @@ const Reason = () => {
 
         {/* Call to Action Section */}
         <div className="row justify-content-center" data-aos="fade-up" data-aos-delay={300}>
-          <div className="col-lg-8">
+          <div className="col-lg-12">
             <div 
               className="card border-0 shadow-lg text-center p-5 rounded-4"
               style={{
@@ -206,7 +206,7 @@ const Reason = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .feature-card {
           transition: all 0.3s ease;
           position: relative;
