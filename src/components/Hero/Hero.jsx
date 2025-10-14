@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/Logo.png'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
